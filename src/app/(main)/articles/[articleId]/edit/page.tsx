@@ -7,10 +7,10 @@ import { ArrowLeftIcon, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/container";
 import { EditArticleForm } from "@/features/articles/components/edit-article-form";
+import { DeleteArticleModal } from "@/features/articles/components/delete-article-modal";
 
 import { useGetArticle } from "@/features/articles/api/use-get-article";
 import { useGetCurrent } from "@/features/auth/api/use-get-current";
-import { DeleteArticleModal } from "@/features/articles/components/delete-article-modal";
 
 interface EditArticlePageProps {
   params: {

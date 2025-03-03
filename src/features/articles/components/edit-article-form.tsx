@@ -114,7 +114,7 @@ export const EditArticleForm = ({ article }: EditArticleFormProps) => {
             </div>
             <div className="flex-1 gap-12 flex">
               {isPreview ? (
-                <div className="bg-neutral-100 p-8 pb-40 min-h-[500px] overflow-auto prose prose-sm md:prose-base lg:prose-lg dark:prose-invert w-full max-w-none prose-pre:bg-dark-800 prose-pre:border prose-pre:border-border">
+                <div className="border rounded-md p-8 pb-40 min-h-[500px] overflow-auto prose prose-sm md:prose-base lg:prose-lg dark:prose-invert w-full max-w-none prose-pre:bg-dark-800 prose-pre:border prose-pre:border-border">
                   <ReactMarkdown>{form.getValues("content")}</ReactMarkdown>
                 </div>
               ) : (
@@ -164,32 +164,32 @@ export const EditArticleForm = ({ article }: EditArticleFormProps) => {
                 <Separator className="my-2" />
                 <div className="space-y-4">
                   {!article.publishedAt ? (
-                     <Button
-                     type="button"
-                     className="w-full"
-                     onClick={handlePublishArticle}
-                     disabled={isPublishingArticle}
-                   >
-                     Publish
-                   </Button>
-                 ) : (
-                   <Button
-                     type="button"
-                     className="w-full"
-                     onClick={handleUnpublishArticle}
-                     disabled={isUnpublishingArticle}
-                   >
-                     Unpublish
-                   </Button>
-                 )}
-                 <Button
-                   variant="destructive"
-                   type="button"
-                   className="w-full"
-                   onClick={openDeleteArticleModal}
-                 >
-                   Delete
-                 </Button>
+                    <Button
+                      type="button"
+                      className="w-full"
+                      onClick={handlePublishArticle}
+                      disabled={isPublishingArticle}
+                    >
+                      Publish
+                    </Button>
+                  ) : (
+                    <Button
+                      type="button"
+                      className="w-full"
+                      onClick={handleUnpublishArticle}
+                      disabled={isUnpublishingArticle}
+                    >
+                      Unpublish
+                    </Button>
+                  )}
+                  <Button
+                    variant="destructive"
+                    type="button"
+                    className="w-full"
+                    onClick={openDeleteArticleModal}
+                  >
+                    Delete
+                  </Button>
                 </div>
               </div>
             </div>
